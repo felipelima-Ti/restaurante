@@ -149,7 +149,7 @@ const main = async () => {
               "hambúrguer(100% carne bovina), alface americana, queijo fatiado sabor cheddar, molho especial, cebola, picles e pão com gergilim, acompanhamento e bebida.",
             price: 39.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/hamburguer.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/hamburguer.png?raw=true",
             ingredients: [
               "Pão com gergilim",
               "Hambúrguer de carne 100% bovina",
@@ -166,7 +166,7 @@ const main = async () => {
               "Dois hambúrgueres de carne 100% bovina,queijo processado sabor cheddar, o delicioso molho lácteo com queijo tipo cheddar tudo isso no pão tipo brioche trazendo uma explosão de sabores pros seus dias de glória!.",
             price: 41.5,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/duplo-chesse.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/duplo-chesse.png?raw=true",
             ingredients: [
               "Pão tipo brioche",
               "Hambúrguer de carne 100% bovina",
