@@ -130,7 +130,7 @@ const main = async () => {
               "hambúrguerer de frango, pão com gergelim,tomate,alface e acompanhamento de batata frita.",
             price: 36.2,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/burguer-frango.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/burguer-frango.png?raw=true",
             ingredients: [
               "Pão com gergelim",
               "Hambúrguer de carne de frango",
@@ -180,7 +180,7 @@ const main = async () => {
               "Composto por pão tipo brioche com molho Honey&Fire, bacon em fatias, alface, tomate, queijo sabor cheddar e carne 100% de peito de frango.",
             price: 39.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/sandwich.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/sandwich.png?raw=true",
             ingredients: [
               "Pão tipo brioche",
               "Molho Honey&Fire",
@@ -215,7 +215,7 @@ const main = async () => {
             description: "Batatas fritas crocantes e sequinhas. Vem bastante!",
             price: 10.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/batata%20grande.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/batata%20grande.png?raw=true",
             ingredients: ["batata", "queijo tipo cheddar", "bacon"],
           },
           {
@@ -224,7 +224,7 @@ const main = async () => {
               "Batatas fritas crocantes e sequinhas. Vem uma média quantidade!",
             price: 9.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/batata.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/batata.png?raw=true",
             ingredients: [],
           },
           {
@@ -232,7 +232,7 @@ const main = async () => {
             description: "Batatas fritas crocantes e sequinhas!",
             price: 5.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/batata.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/batata.png?raw=true",
             ingredients: [],
           },
         ],
@@ -245,7 +245,7 @@ const main = async () => {
             description: "Coca-cola gelada para acompanhar seu lanche.",
             price: 5.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/coca.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/coca.png?raw=true",
             ingredients: [],
           },
           {
@@ -253,7 +253,7 @@ const main = async () => {
             description: "Fanta Laranja gelada para acompanhar seu lanche.",
             price: 5.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/fanta.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/fanta.png?raw=true",
             ingredients: [],
           },
           {
@@ -261,7 +261,7 @@ const main = async () => {
             description: "A bebida favorita do Cristiano Ronaldo.",
             price: 2.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/agua.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/agua.png?raw=true",
             ingredients: [],
           },
         ],
@@ -274,7 +274,7 @@ const main = async () => {
             description: "Casquinha de sorvete sabor baunilha.",
             price: 3.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/sorvete-baunilha.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/sorvete-baunilha.png?raw=true",
             ingredients: [],
           },
           {
@@ -282,7 +282,7 @@ const main = async () => {
             description: "Casquinha de sorvete sabor chocolate.",
             price: 3.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/sorvete-chocolate.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/sorvete-chocolate.png?raw=true",
             ingredients: [],
           },
           {
@@ -290,7 +290,7 @@ const main = async () => {
             description: "Caquinha sorvete misto de chocolate e baunilha",
             price: 2.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/sorvete-misto.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/sorvete-misto.png?raw=true",
             ingredients: [],
           },
         ],
@@ -306,8 +306,8 @@ const main = async () => {
       name: "PizzaTop",
       slug: "pizza-top",
       description: "As melhores pizzas artesanais",
-      avatarImageUrl: "https://github.com/felipelima-Ti/restaurante/blob/main/pizzaa.png?raw=true",
-      coverImageUrl: "https://github.com/felipelima-Ti/restaurante/blob/main/background-pizza.png?raw=true",
+      avatarImageUrl: "https://github.com/felipelima-Ti/restaurante/blob/main/public/pizzaa.png?raw=true",
+      coverImageUrl: "https://github.com/felipelima-Ti/restaurante/blob/main/public/background-pizza.png?raw=true",
     },
     categories: [
       {
@@ -317,14 +317,14 @@ const main = async () => {
             name: "Pizza Calabresa",
             description: "Molho de tomate, calabresa, cebola e mussarela",
             price: 39.9,
-            imageUrl: "https://github.com/felipelima-Ti/restaurante/blob/main/calabreza.png?raw=true",
+            imageUrl: "https://github.com/felipelima-Ti/restaurante/blob/main/public/calabreza.png?raw=true",
             ingredients: ["Molho de tomate", "Calabresa", "Cebola", "Mussarela"],
           },
           {
             name: "Pizza Portuguesa",
             description: "Presunto, ovos, cebola, azeitona, pimentão e queijo",
             price: 42.9,
-            imageUrl: "https://github.com/felipelima-Ti/restaurante/blob/main/portuguesa.png?raw=true",
+            imageUrl: "https://github.com/felipelima-Ti/restaurante/blob/main/public/portuguesa.png?raw=true",
             ingredients: [
               "Presunto",
               "Ovos",
@@ -338,7 +338,7 @@ const main = async () => {
             name:"marguerita",
             description:"Criada no ano de 1889 pelo pizzaiolo Rafaelle Esposito, para homenagear a rainha Margarida de Saboia por ter encontrado solução em um momento histórico importante",
             price:45.9,
-            imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/marguerita.png?raw=true",
+            imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/public/marguerita.png?raw=true",
             ingredients:[
               "Tomate ou molho de tomate",
               "Muçarela de búfala",
@@ -349,7 +349,7 @@ const main = async () => {
           name:"frango com catupiry",
           description:"uma deliciosa pizza com frango desfiado e catupiry",
           price:42.0,
-          imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/frango.png?raw=true",
+          imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/public/frango.png?raw=true",
           ingredients:[
             "massa de pizza",
             "frango desfiado",
@@ -360,7 +360,7 @@ const main = async () => {
          name:"4-queijos",
          description:"delicosa pizza com 4 tipos de queijo para os amantes de queijo",
          price: 40.0, 
-         imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/4queijo.png?raw=true",
+         imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/public/4queijo.png?raw=true",
          ingredients:[
           "Mussarela",
           "Gongonzola",
@@ -378,7 +378,7 @@ const main = async () => {
             name: "Pizza de Chocolate com morango",
             description: "Cobertura de chocolate ao leite com morango",
             price: 34.9,
-            imageUrl: "https://github.com/felipelima-Ti/restaurante/blob/main/chocolate.png?raw=true",
+            imageUrl: "https://github.com/felipelima-Ti/restaurante/blob/main/public/chocolate.png?raw=true",
             ingredients: [
               "Massa doce", 
               "Chocolate ao leite",
@@ -389,7 +389,7 @@ const main = async () => {
             name:"pizza de brigadeiro",
             description:"deliciosa pizza sabor de brigadeiro com granulado",
             price: 42.2,
-            imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/brigadeiro.png?raw=true",
+            imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/public/brigadeiro.png?raw=true",
             ingredients: [
               "Massa doce",
               "brigadeiro",
@@ -400,7 +400,7 @@ const main = async () => {
            name:"Prestigio",
            description:"deliciosa pizza sabor prestigio com cobertura de chocolate e coco com cerejas",
            price: 46.5,
-           imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/prestigio.png?raw=true",
+           imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/public/prestigio.png?raw=true",
            ingredients:[
             "Massa doce",
             "Chocolate",
@@ -412,7 +412,7 @@ const main = async () => {
             name:"banana e chocolate",
             description:"deliciosa pizza sabor banana com cobertura de chocolate",
             price: 42.3,
-            imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/banana.png?raw=true",
+            imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/public/banana.png?raw=true",
             ingredients: [
               "Massa doce",
               "Chocolate",
