@@ -1,0 +1,17 @@
+.rounded-full{ 
+     background-color:#ebebeb; /* Cor de fundo do botão */
+            color: black; /* Cor do texto */
+            font-size: 14px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px; /* Bordas arredondadas */
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+}
+ button:hover {
+    background-color: #c9c9c9; /* Efeito hover */
+}
+.rounded-full p{
+    font-size:18px;   
+}
+
