@@ -72,7 +72,7 @@ const main = async () => {
       avatarImageUrl:
         "https://github.com/felipelima-Ti/restaurante/blob/main/public/logoi.png?raw=true",
       coverImageUrl:
-        "https://github.com/felipelima-Ti/restaurante/blob/main/background.png?raw=true",
+        "https://github.com/felipelima-Ti/restaurante/blob/main/public/background.png?raw=true",
     },
     categories: [
       {
