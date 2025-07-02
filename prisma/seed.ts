@@ -114,7 +114,7 @@ const main = async () => {
               "Composto por pão , molho Honey&Fire, alface, tomate, queijo sabor cheddar e carne 100% de peito de frango, temperada e empanada, acompanhamento e bebida.",
             price: 39.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/sanduiche.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/sanduiche.png?raw=true",
             ingredients: [
               "Pão tipo brioche",
               "Molho Honey&Fire",
