@@ -84,7 +84,7 @@ const main = async () => {
               "hambúrguere (100% carne bovina), alface americana, queijo fatiado sabor cheddar, molho especial,tomate, picles e pão com gergilim, acompanhamento e bebida e uma batata frita.",
             price: 39.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/Combo.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/Combo.png?raw=true",
             ingredients: [
               "Pão com gergilim",
               "Hambúrguer de carne 100% bovina",
