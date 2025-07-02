@@ -14,7 +14,12 @@ const HomePage = async () => {
   return (
     <div className="h-screen flex flex-col items-center justify-center px-6 pt-24">
       <div className="flex flex-col items-center gap-2">
-        <Image src={restaurant.avatarImageUrl} alt={restaurant.name} width={82} height={82} />
+        <Image
+  src="https://github.com/felipelima-Ti/restaurante/blob/main/public/logoi.png?raw=true"
+  alt="Nome do restaurante"
+  width={82}
+  height={82}
+/>
       </div>
 
       <h2 className="p-1">{restaurant.name}</h2>
