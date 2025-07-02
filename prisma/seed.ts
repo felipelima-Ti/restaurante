@@ -180,7 +180,7 @@ const main = async () => {
               "Composto por pão tipo brioche com molho Honey&Fire, bacon em fatias, alface, tomate, queijo sabor cheddar e carne 100% de peito de frango.",
             price: 39.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/public/sandwich.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/sandwichh.png?raw=true",
             ingredients: [
               "Pão tipo brioche",
               "Molho Honey&Fire",
