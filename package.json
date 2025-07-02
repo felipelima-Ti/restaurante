@@ -2,7 +2,7 @@
   "name": "restaurante",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://felipelima-Ti.github.io/restaurante",
+  "homepage": "https://felipelima-Ti.github.io/site-restaurante",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useParams, useSearchParams } from "next/navigation";
 import { formatCurrency } from "@/helpers/formatcurrency";
-import { useEffect } from "react";
+//import { useEffect } from "react";
 
 interface ProductsProps {
   products: Product[];
