@@ -70,7 +70,7 @@ const main = async () => {
       slug: "fast-burguer",
       description: "O melhor fast food do mundo",
       avatarImageUrl:
-        "https://github.com/felipelima-Ti/restaurante/blob/main/logoi.png?raw=true",
+        "https://github.com/felipelima-Ti/restaurante/blob/main/public/logoi.png?raw=true",
       coverImageUrl:
         "https://github.com/felipelima-Ti/restaurante/blob/main/background.png?raw=true",
     },
