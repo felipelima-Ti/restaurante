@@ -101,7 +101,7 @@ const main = async () => {
               "Dois hambúrgueres de carne 100% bovina,mais duas fatias de queijo! Acompanhamento de um milk shake.",
             price: 31.5,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/chesse-burguer.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/chesse-burguer.png?raw=true",
             ingredients: [
               "Pão com gergilim",
               "Hambúrguer de carne 100% bovina",
