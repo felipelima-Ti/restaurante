@@ -197,7 +197,7 @@ const main = async () => {
               "hambúrguerer (100% carne frango),alface,tomate e pão com gergelim.",
             price: 36.2,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/public/frango2.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/burgue-frangoo.png?raw=true",
             ingredients: [
               "Pão com gergelim",
               "alface",
