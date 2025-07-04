@@ -5,7 +5,7 @@ import ConsumptionMethodOption from "./[slug]/components/comsumption-method-opti
 import "./style.css";
 
 const HomePage = async () => {
-  const restaurant = await db.restaurant.findFirst(); // Busca qualquer restaurante disponível
+  const restaurant = await db.restaurant.findFirst(); // Busca restaurante
 
   if (!restaurant) {
     return notFound();
@@ -32,7 +32,7 @@ src="https://github.com/felipelima-Ti/restaurante/blob/main/public/logoi.png?raw
       <div className="grid grid-cols-2 pt-14">
         <ConsumptionMethodOption
           option="DINE_IN"
-          slug={restaurant.slug} // Ainda usamos slug para redirecionar corretamente
+          slug={restaurant.slug} //slug do restaurante
           buttonText="Para comer aqui"
           imageAlt="Comer aqui"
           imageUrl="/dine_in.jpg"

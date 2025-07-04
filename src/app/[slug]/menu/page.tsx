@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import RestaurantHeader from "./components/header";
 import RestaurantCategories from "./components/categories";
 
-//import Image from "next/image";
+
 
 interface RestaurantMenuPageProps {
     params: Promise<{ slug: string}>;

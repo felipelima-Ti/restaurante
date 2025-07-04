@@ -39,7 +39,7 @@ const RestaurantCategories = ({ restaurant }: RestaurantCategoriesProps) => {
     return selectedCategory.id == category.id ? "default" : "secondary";
   };
 
-  // ✅ Forçar recarregamento automático uma vez
+  //recarregar pagina
   useEffect(() => {
     if (typeof window !== "undefined" && !window.location.href.includes("#reloaded")) {
       window.location.href += "#reloaded";
