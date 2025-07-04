@@ -215,7 +215,7 @@ const main = async () => {
             description: "Batatas fritas crocantes e sequinhas. Vem bastante!",
             price: 10.9,
             imageUrl:
-              "https://github.com/felipelima-Ti/restaurante/blob/main/public/batata%20grande.png?raw=true",
+              "https://github.com/felipelima-Ti/restaurante/blob/main/public/cheddar.jpg?raw=true",
             ingredients: ["batata", "queijo tipo cheddar", "bacon"],
           },
           {
