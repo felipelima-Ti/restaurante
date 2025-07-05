@@ -31,7 +31,9 @@ Funcionalidades
 Tecnologias usadas:
 
 TypeScript|Next.js
+
 Tailwind css
+
 PrismaDb
 
  
