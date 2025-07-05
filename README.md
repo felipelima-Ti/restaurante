@@ -26,6 +26,10 @@ Funcionalidades
  
  
 
+
+
+
+
 Tecnologias Utilizadas
 
 TypeScript | Next.js
