@@ -5,7 +5,10 @@ com cardápio dinâmico, carrinho de compras e checkout integrado.
 Ideal para delivery de pizza, lanches ou qualquer outro tipo de comida.
 
 
+
 ![image](https://github.com/user-attachments/assets/e5375d82-7871-4e2f-8863-0236263eeccd)
+
+
 
 
 Funcionalidades
@@ -19,6 +22,8 @@ Funcionalidades
  Tela de checkout
  
  Painel de gerenciamento de pedidos (admin)
+
+ 
  
 
 Tecnologias Utilizadas
