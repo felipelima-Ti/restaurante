@@ -35,12 +35,3 @@ TypeScript|Next.js
 Tailwind css
 
 PrismaDb
-
- 
- 
-
-
-
-
-
-
