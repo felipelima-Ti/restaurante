@@ -32,7 +32,7 @@ src="https://github.com/felipelima-Ti/restaurante/blob/main/public/logoi.png?raw
       <div className="grid grid-cols-2 pt-14">
         <ConsumptionMethodOption
           option="DINE_IN"
-          slug={restaurant.slug} //slug do restaurante
+          slug={restaurant.slug} //slug restaurante
           buttonText="Para comer aqui"
           imageAlt="Comer aqui"
           imageUrl="/dine_in.jpg"

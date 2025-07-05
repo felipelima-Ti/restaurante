@@ -44,5 +44,4 @@ const RestaurantMenuPage = async ({ params, searchParams }: RestaurantMenuPagePr
 };
 
 export default RestaurantMenuPage;
-//http://localhost:3000/FAST-burguer/menu?consumptionMethod=1234
 
