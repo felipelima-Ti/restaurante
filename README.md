@@ -34,4 +34,34 @@ TypeScript|Next.js
 
 Tailwind css
 
-PrismaDb
+Prisma
+
+
+como compilar o projeto:
+
+instale as dependencias > - typeScript - 1- npx create-next-app@latest nome-do-projeto --typescript inicia um projeto TypeScript com NextJS
+<br>
+                                         2-  npm run dev (para rodar seu projeto)
+<br>
+                            Prisma - 1- npm install prisma --save-dev (O Prisma CLI geralmente é usado apenas durante o desenvolvimento)                         
+<br>
+                                     2- npm install @prisma/client (e usado para o prisma acessar seu banco de dados)
+<br>
+                                     3- npx prisma init ( gera o prisma com o arquivo schema.prisma , e o arquivo .env (usado para urls ambiente , dependecias do seu banco de dados que voce esta usando) )
+<br>
+                                     4- npx prisma generate (para atualizar seu arquivo do prsima squema.prisma)
+<br>
+                                     5- npx prisma db push (se voce ja estiver configurado o banco de dados e for a primeira vez rodando)
+<br>
+                            Tailwind - npm install -D tailwindcss@3.4.1(instala o tailwindcss) ou npx tailwindcss init -p
+
+                            SE CASO ESTA DANDO ERRO TENTE:
+<br>
+                            npm install -D tailwindcss@3.4.1 postcss@8.4.21 autoprefixer@10.4.14
+                                      
+
+
+                          
+
+                       
+
