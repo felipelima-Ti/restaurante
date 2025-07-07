@@ -56,7 +56,7 @@ Prisma - 1- npm install prisma --save-dev (O Prisma CLI geralmente é usado apen
 5- npx prisma db push (se voce ja estiver configurado o banco de dados e for a primeira vez rodando)
 <br>
 Tailwind - npm install -D tailwindcss@3.4.1(instala o tailwindcss) ou npx tailwindcss init -p
-
+<br>
 SE CASO ESTA DANDO ERRO TENTE:
 <br>
 npm install -D tailwindcss@3.4.1 postcss@8.4.21 autoprefixer@10.4.14
