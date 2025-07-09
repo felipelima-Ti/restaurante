@@ -64,6 +64,7 @@ model Order {
   customerName      String
   customerCpf       String
   customerEndereco  String
+ // productName       String 
   createdAt         DateTime          @default(now())
   updatedAt         DateTime          @updatedAt
 }
@@ -76,6 +77,7 @@ model OrderProduct {
   orderId   Int
   quantity  Int
   price     Float
+  productName       String 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

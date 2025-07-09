@@ -9,7 +9,19 @@ import Image from "next/image";
 import { useContext, useState } from "react"
 import { CartContext } from "../../contexts/cart";
 import CartSheet from "../../components/cart-sheet";
+import {db} from "../../../../../lib/prisma";
+const order = await db.order.findUnique({
+  where: { id: 1 },
+  include: {
+    orderProducts: {
+      include: {
+        product: true,
+      },
+    },
+  },
+});
 interface ProductDetailsProps {
+   
     product: Prisma.ProductGetPayload<{
         include: {
             restaurant: {
