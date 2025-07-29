@@ -264,6 +264,13 @@ const main = async () => {
               "https://github.com/felipelima-Ti/restaurante/blob/main/public/agua.png?raw=true",
             ingredients: [],
           },
+          {
+            name: "Milk shake",
+            description: "Milk shake geladinho sabor baunilha chocolate",
+            price:10.0,
+            imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/public/milkshake.png?raw=true",
+            ingredients:[]
+          }
         ],
       },
       {
