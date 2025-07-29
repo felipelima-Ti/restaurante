@@ -85,13 +85,16 @@ const OrderList = ({ orders }: OrderListProps) => {
             <div className="space-y-2">
                 {order.orderProducts.map(orderProduct => (
                     <div key={orderProduct.id} className="flex items-center gap-2">
-                        <div className="h-4 w-4 flex items-center justify-center rounded-full bg-gray-400 text-xs font-semibold text-white">
+                        <div className="h-4 w-4 flex items-center justify-center rounded-full bg-gray-400 text-xs font-semibold text-white mb-20 ">
                             {orderProduct.quantity}
                         </div>
 
                         <div>
+                            
                             <p className="text-sm">{orderProduct.product.name}</p>
-                            <p className="mt-2 text-xs text-black-500">{order.customerEndereco}</p>
+                            <p className="mt-2 text-xs text-black-500">codigo pedido: {order.id}</p>
+                            <p className="mt-2 text-xs text-black-500">nome da rua: {order.customerEndereco}</p>
+                            <p className="mt-2 text-xs text-black-500"> numero cartão: {order.customerCartao}</p>
                         </div>
                     </div>
 

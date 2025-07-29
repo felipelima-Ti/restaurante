@@ -6,11 +6,13 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { formatarEndereco } from "../helpers/endereco";
 import Products from "../components/products";
+import { formatarCartao } from "../helpers/cartao";
 
 interface CreateOrderInput {
   customerName: string;
   customerCpf: string;
   customerEndereco: string;
+  customerCartao: string;
   products: Array<{
     id: string;
     quantity: number;
@@ -55,6 +57,7 @@ export const createOrder = async (input: CreateOrderInput) => {
     customerName: input.customerName,
     customerCpf: removeCpfPunctation(input.customerCpf),
     customerEndereco: formatarEndereco(input.customerEndereco),
+    customerCartao: formatarCartao(input.customerCartao),
     orderProducts: {
       createMany: {
         data: productsWithPricesAndQuantities,

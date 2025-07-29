@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Drawer,DrawerClose,DrawerContent,DrawerDescription,DrawerFooter,DrawerHeader,DrawerTitle,DrawerTrigger } from "@/components/ui/drawer";
-import {z} from "zod";
+import {number, z} from "zod";
 import { isValidCpf } from "../helpers/cpf";
 import { formatarEndereco } from "../helpers/endereco";
 import { useForm } from "react-hook-form";
@@ -17,6 +17,7 @@ import { useContext, useTransition } from "react";
 import { CartContext } from "../contexts/cart";
 import { toast } from "sonner";
 import { Loader2Icon } from "lucide-react";
+import { formatarCartao } from "../helpers/cartao";
 const formSchema = z.object({
      name: z.string().trim().min(1, {
     message: 'O nome é obrigatório',
@@ -29,6 +30,9 @@ const formSchema = z.object({
   endereco: z.string().trim().min(1, {
     message: 'O endereço é obrigatório.',
   }).transform((value) => formatarEndereco(value)),
+   cartao: z.string()
+    .trim()
+    .transform((value) => formatarCartao(value))
 });
 
 type FormSchema  = z.infer<typeof formSchema>
@@ -49,6 +53,7 @@ const FinishOrderDialog = ({open, onOpenChange}:FinishOrderDialogProps) => {
             name: "",
             cpf: "",
             endereco:"",
+            cartao:"",
         },
         shouldUnregister: true,
     })
@@ -63,6 +68,7 @@ const FinishOrderDialog = ({open, onOpenChange}:FinishOrderDialogProps) => {
               customerCpf: data.cpf,
               customerEndereco: data.endereco,
               customerName: data.name,
+              customerCartao: data.cartao,
               products,
               slug,
             });
@@ -122,6 +128,19 @@ const FinishOrderDialog = ({open, onOpenChange}:FinishOrderDialogProps) => {
               <FormLabel>Seu endereço</FormLabel>
               <FormControl>
                 <Input placeholder="Digite seu endereço..." {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+         <FormField
+          control={form.control}
+          name="cartao"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>digite o numero do cartão</FormLabel>
+              <FormControl>
+                <Input placeholder="Cartao credito ou debito..." {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

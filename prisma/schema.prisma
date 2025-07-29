@@ -64,7 +64,7 @@ model Order {
   customerName      String
   customerCpf       String
   customerEndereco  String
- // productName       String 
+  customerCartao    String?
   createdAt         DateTime          @default(now())
   updatedAt         DateTime          @updatedAt
 }
@@ -98,4 +98,5 @@ id String @id @default(uuid())
 customerName String
 customerCpf String
 customerEndereco String
+customerCartao String?
 }
