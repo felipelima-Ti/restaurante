@@ -269,13 +269,25 @@ const main = async () => {
             description: "Milk shake geladinho sabor baunilha chocolate",
             price:10.0,
             imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/public/milkshake.png?raw=true",
-            ingredients:[]
+            ingredients:[
+              "leite",
+              "sorvete de baulinha",
+              "sorvete de chocolate"
+            ]
           }
         ],
       },
       {
         name: "Sobremesas",
         products: [
+          {
+          name: "Petit gâteau",
+          description:"Petit gateau junto com um delicioso sorvete de creme",
+          price:15.0,
+          imageUrl:"https://github.com/felipelima-Ti/restaurante/blob/main/public/petit%20gateau.png?raw=true",
+          ingredients:[]
+
+          },
           {
             name: "Casquinha de Baunilha",
             description: "Casquinha de sorvete sabor baunilha.",
