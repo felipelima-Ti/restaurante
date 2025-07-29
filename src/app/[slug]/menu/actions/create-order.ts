@@ -5,7 +5,7 @@ import { removeCpfPunctation } from "../helpers/cpf";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { formatarEndereco } from "../helpers/endereco";
-import Products from "../components/products";
+
 import { formatarCartao } from "../helpers/cartao";
 
 interface CreateOrderInput {

@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Drawer,DrawerClose,DrawerContent,DrawerDescription,DrawerFooter,DrawerHeader,DrawerTitle,DrawerTrigger } from "@/components/ui/drawer";
-import {number, z} from "zod";
+import { z} from "zod";
 import { isValidCpf } from "../helpers/cpf";
 import { formatarEndereco } from "../helpers/endereco";
 import { useForm } from "react-hook-form";
