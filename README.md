@@ -1,5 +1,5 @@
 
-Um sistema completo para pedidos online de um restaurante,
+Um sistema completo de self checkout para pedidos de um restaurante,
 
 com cardápio dinâmico, carrinho de compras e checkout integrado.
 
