@@ -6,8 +6,6 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { formatarEndereco } from "../helpers/endereco";
 
-import { formatarCartao } from "../helpers/cartao";
-
 interface CreateOrderInput {
   customerName: string;
   customerCpf: string;
