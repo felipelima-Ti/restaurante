@@ -94,7 +94,7 @@ const OrderList = ({ orders }: OrderListProps) => {
                             <p className="text-sm">{orderProduct.product.name}</p>
                             <p className="mt-2 text-xs text-black-500">codigo pedido: {order.id}</p>
                             <p className="mt-2 text-xs text-black-500">nome da rua: {order.customerEndereco}</p>
-                            <p className="mt-2 text-xs text-black-500"> numero cartão: {order.customerCartao}</p>
+                            <p className="mt-2 text-xs text-black-500"> observaçoes: {order.customerCartao}</p>
                         </div>
                     </div>
 

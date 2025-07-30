@@ -57,7 +57,7 @@ export const createOrder = async (input: CreateOrderInput) => {
     customerName: input.customerName,
     customerCpf: removeCpfPunctation(input.customerCpf),
     customerEndereco: formatarEndereco(input.customerEndereco),
-    customerCartao: formatarCartao(input.customerCartao),
+    customerCartao: formatarEndereco(input.customerCartao),
     orderProducts: {
       createMany: {
         data: productsWithPricesAndQuantities,

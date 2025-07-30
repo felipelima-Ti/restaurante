@@ -27,12 +27,12 @@ const formSchema = z.object({
   }).refine((value) => isValidCpf(value), {
     message: 'CPF inválido',
   }),
-  endereco: z.string().trim().min(1, {
-    message: 'O endereço é obrigatório.',
-  }).transform((value) => formatarEndereco(value)),
+  endereco: z.string()
+  .trim()
+  .transform((value) => formatarEndereco(value)),
    cartao: z.string()
     .trim()
-    .transform((value) => formatarCartao(value))
+    .transform((value) => formatarEndereco(value))
 });
 
 type FormSchema  = z.infer<typeof formSchema>
@@ -138,9 +138,9 @@ const FinishOrderDialog = ({open, onOpenChange}:FinishOrderDialogProps) => {
           name="cartao"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>digite o numero do cartão</FormLabel>
+              <FormLabel>observaçoes</FormLabel>
               <FormControl>
-                <Input placeholder="Cartao credito ou debito..." {...field} />
+                <Input placeholder="exemplo : tirar cebola ... " {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
