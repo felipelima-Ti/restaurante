@@ -36,7 +36,7 @@ Tailwind css
 
 Prisma
 
-<br>
+<br><br><br><br>
 como compilar o projeto:
 <br><br>
 instale as dependencias > - typeScript - 
