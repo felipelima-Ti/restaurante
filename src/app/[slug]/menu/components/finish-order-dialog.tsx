@@ -18,6 +18,7 @@ import { CartContext } from "../contexts/cart";
 import { toast } from "sonner";
 import { Loader2Icon } from "lucide-react";
 
+
 const formSchema = z.object({
      name: z.string().trim().min(1, {
     message: 'O nome é obrigatório',
