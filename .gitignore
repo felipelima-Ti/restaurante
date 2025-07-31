@@ -41,8 +41,3 @@ yarn-error.log*
 next-env.d.ts
 
 /src/generated/prisma
-# Ignorar a conexão com o Firebase
-firebaseConnection.js
-firebase-config.ts
-firebase.js
-.env
