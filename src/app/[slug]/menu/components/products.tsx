@@ -14,17 +14,6 @@ const Products = ({ products }: ProductsProps) => {
   const searchParams = useSearchParams();
   const consumptionMethod = searchParams.get("consumptionMethod");
 
-  //useEffect(() => {
-   // if (typeof window !== "undefined") {
-      //const hasReloaded = sessionStorage.getItem("productsPageReloaded");
-
-     // if (!hasReloaded) {
-      //  sessionStorage.setItem("productsPageReloaded", "true");
-      //  window.location.reload();
-     // }
-   // }
-  //}, []);
-
   return (
     <div className="space-y-3 px-5">
       {products.map((product) => (

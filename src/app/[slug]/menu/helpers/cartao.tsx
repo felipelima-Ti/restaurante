@@ -7,6 +7,6 @@
  */
 export function formatarCartao(cartao: string): string {
   const apenasNumeros = cartao.replace(/\D/g, '');
-  const grupos = apenasNumeros.match(/.{1,4}/g); // grupos de até 4 dígitos
+  const grupos = apenasNumeros.match(/.{1,4}/g); 
   return grupos ? grupos.join(' ') : '';
 }
