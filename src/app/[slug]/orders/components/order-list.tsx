@@ -25,7 +25,6 @@ interface OrderListProps {
     };
   }>[];
 }
-
 const getStatusLabel = (status: OrderStatus) => {
   if (status == "DELIVERY") return "Saiu para a entrega";
   if (status == "FINISHED") return "Finalizado";
