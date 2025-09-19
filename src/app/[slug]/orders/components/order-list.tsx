@@ -7,7 +7,6 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { formatCurrency } from "@/helpers/formatcurrency";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 
 interface OrderListProps {
   orders: Prisma.OrderGetPayload<{
