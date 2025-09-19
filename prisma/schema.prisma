@@ -65,6 +65,7 @@ model Order {
   customerCpf       String
   customerEndereco  String
   customerCartao    String?
+  customerPagamento String?
   createdAt         DateTime          @default(now())
   updatedAt         DateTime          @updatedAt
 }

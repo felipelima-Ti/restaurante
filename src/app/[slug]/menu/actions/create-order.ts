@@ -11,6 +11,7 @@ interface CreateOrderInput {
   customerCpf: string;
   customerEndereco: string;
   customerCartao: string;
+  customerPagamento: string;
   products: Array<{
     id: string;
     quantity: number;
@@ -56,6 +57,7 @@ export const createOrder = async (input: CreateOrderInput) => {
     customerCpf: removeCpfPunctation(input.customerCpf),
     customerEndereco: formatarEndereco(input.customerEndereco),
     customerCartao: formatarEndereco(input.customerCartao),
+    customerPagamento:formatarEndereco(input.customerPagamento),
     orderProducts: {
       createMany: {
         data: productsWithPricesAndQuantities,
