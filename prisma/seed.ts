@@ -68,7 +68,7 @@ const main = async () => {
     baseInfo: {
       name: "FastBurguer",
       slug: "fast-burguer",
-      description: "O melhor fast food do mundo",
+      description: "O sabor que você procura está aqui",
       avatarImageUrl:
         "https://github.com/felipelima-Ti/restaurante/blob/main/public/logoi.png?raw=true",
       coverImageUrl:
