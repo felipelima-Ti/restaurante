@@ -127,9 +127,25 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   </FormItem>
                 )}
               />
+                <FormField
+                control={form.control}
+                name="cpf"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Seu CPF</FormLabel>
+                    <FormControl>
+                      <PatternFormat
+                        placeholder="Digite seu CPF..."
+                        format="###.###.###-##"
+                        customInput={Input}
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
             <Form {...form}>
- 
-
     <FormField
       control={form.control}
       name="consumptionMethod"
@@ -149,41 +165,20 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
         </FormItem>
       )}
     />
-
 </Form>
-              <FormField
-                control={form.control}
-                name="cpf"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Seu CPF</FormLabel>
-                    <FormControl>
-                      <PatternFormat
-                        placeholder="Digite seu CPF..."
-                        format="###.###.###-##"
-                        customInput={Input}
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-         
-              <FormField
+  <FormField
                 control={form.control}
                 name="endereco"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Seu endereço (opcional)</FormLabel>
                     <FormControl>
-                      <Input placeholder="Digite seu endereço..." {...field} />
+                      <Input className="p-7" placeholder="Digite seu endereço..." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-             
               <FormField
                 control={form.control}
                 name="pagamento"
@@ -191,7 +186,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   <FormItem>
                     <FormLabel>Forma de pagamento</FormLabel>
                     <FormControl>
-                      <select {...field} className="border rounded p-2 w-full">
+                      <select {...field} className="border rounded p-2 w-full p-5">
                         <option value="">Selecione...</option>
                         <option value="Caixa">Caixa</option>
                         <option value="Pix">Pix</option>
