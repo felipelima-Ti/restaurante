@@ -113,7 +113,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
 
         <div className="p-5">
           <Form  {...form}>
-            <div className="p-10">
+            <div className="pb-40">
             <form onSubmit={form.handleSubmit(onSubmit)} className=" space-y-8">
               <FormField
                 control={form.control}
@@ -175,7 +175,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   <FormItem>
                     <FormLabel>Seu endereço (opcional)</FormLabel>
                     <FormControl>
-                      <Input className="p-7" placeholder="Digite seu endereço..." {...field} />
+                      <Input className="" placeholder="Digite seu endereço..." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -188,7 +188,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   <FormItem>
                     <FormLabel>Forma de pagamento</FormLabel>
                     <FormControl>
-                      <select {...field} className="border rounded p-2 w-full p-5">
+                      <select {...field} className="border rounded p-2 w-full ">
                         <option value="">Selecione...</option>
                         <option value="Caixa">Caixa</option>
                         <option value="Pix">Pix</option>
