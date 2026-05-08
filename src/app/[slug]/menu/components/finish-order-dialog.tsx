@@ -113,7 +113,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
 
         <div className="p-5">
           <Form  {...form}>
-            <div className="pb-30">
+            <div className="pb-35">
             <form onSubmit={form.handleSubmit(onSubmit)} className=" space-y-8">
               <FormField
                 control={form.control}
