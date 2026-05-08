@@ -32,6 +32,12 @@ const getStatusLabel = (status: OrderStatus) => {
   if (status == "PENDING") return "Pendente";
   return "";
 };
+const getConsumptionMethodLabel = (method: string) => {
+  if (method === "DINE_IN") return "Comer aqui";
+  if (method === "TAKEAWAY") return "Para levar";
+
+  return method;
+};
 
 const OrderList = ({ orders }: OrderListProps) => {
   const router = useRouter();
@@ -81,6 +87,7 @@ const OrderList = ({ orders }: OrderListProps) => {
                     ? "bg-green-400"
                     : "bg-gray-400"
                 }
+                
               `}
             >
               {getStatusLabel(order.status)}
@@ -121,6 +128,10 @@ const OrderList = ({ orders }: OrderListProps) => {
                     </p>
                     <p className="mt-2 text-xs text-black-500">
                         Pagamento: {order.customerPagamento}
+                    </p>
+                        <p className="mt-2 text-xs text-black-500">
+                        Metodo de consumo:{" "}
+                        {getConsumptionMethodLabel(order.consumptionMethod)}
                     </p>
                   </div>
                 </div>

@@ -16,7 +16,7 @@ import {Form,FormControl,FormField,FormItem,FormLabel,FormMessage,} from "@/comp
 import { Input } from "@/components/ui/input";
 import { PatternFormat } from "react-number-format";
 import { ConsumptionMethod } from "@prisma/client";
-import { useParams, useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import { createOrder } from "../actions/create-order";
 import { useContext, useTransition } from "react";
 import { CartContext } from "../contexts/cart";
@@ -43,6 +43,9 @@ const formSchema = z.object({
     .optional()
     .transform((value) => (value ? formatarEndereco(value) : "")),
   pagamento: z.string().trim().min(1, { message: "Selecione uma forma de pagamento" }),
+  consumptionMethod: z.string().min(1, {
+  message: "Selecione o tipo do pedido",
+}),
 });
 
 type FormSchema = z.infer<typeof formSchema>;
@@ -55,8 +58,9 @@ interface FinishOrderDialogProps {
 const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
   const { slug } = useParams<{ slug: string }>();
   const { products } = useContext(CartContext);
-  const searchParams = useSearchParams();
+
   const [isPending, startTransition] = useTransition();
+  
 
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
@@ -65,15 +69,15 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
       cpf: "",
       endereco: "",
       pagamento: "",
+      consumptionMethod: "",
     },
     shouldUnregister: true,
   });
 
   const onSubmit = async (data: FormSchema) => {
     try {
-      const consumptionMethod = searchParams.get(
-        "consumptionMethod"
-      ) as ConsumptionMethod;
+     const consumptionMethod =
+     data.consumptionMethod as ConsumptionMethod;
 
       startTransition(async () => {
         await createOrder({
@@ -123,7 +127,30 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   </FormItem>
                 )}
               />
+            <Form {...form}>
+ 
 
+    <FormField
+      control={form.control}
+      name="consumptionMethod"
+      render={({ field }) => (
+        <FormItem>
+          <FormLabel>Metodo de consumo</FormLabel>
+
+          <FormControl>
+            <select {...field} className="border rounded p-2 w-full">
+              <option value="">Selecione...</option>
+              <option value="DINE_IN">Comer aqui</option>
+              <option value="TAKEAWAY">Para levar</option>
+            </select>
+          </FormControl>
+
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+
+</Form>
               <FormField
                 control={form.control}
                 name="cpf"

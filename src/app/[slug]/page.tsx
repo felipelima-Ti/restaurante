@@ -1,58 +1,50 @@
-import { db } from "@/lib/prisma"
+import { db } from "@/lib/prisma";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
-import ConsumptionMethodOption from "./components/comsumption-method-option";
-interface RestaurantPageProps{
-    params: Promise<{slug: string}>
-}
+const HomePage = async () => {
+  const restaurant = await db.restaurant.findFirst();
 
-const RestaurantPage = async ({params}: RestaurantPageProps) => {
-    const {slug} = await params
-  const restaurant = await db.restaurant.findUnique({
-    where: {slug},
-   
-});
-  if(!restaurant){
-    return notFound()
-}
-return(
-<div className="h-screen flex flex-col items-center justify-center px-6 pt-24">
-   
-    <div className="flex flex-col items-center gap-2">
-    <Image src={restaurant?.avatarImageUrl} alt={restaurant.name}width={82} height={82}/>
-    </div>
-    <h2 className="p-1">{restaurant.name}</h2>
-  
-    <div className="pt-24 text-center space-y-2">
-        <h3 className="text-2x1 font-semibold">
-            Seja bem-vindo!
-        </h3>
+  if (!restaurant) {
+    return notFound();
+  }
+
+  return (
+    <div className="h-screen flex flex-col items-center justify-center px-6 pt-24">
+      <div className="flex flex-col items-center gap-2">
+        <Image
+          src="https://github.com/felipelima-Ti/restaurante/blob/main/public/logoi.png?raw=true"
+          alt="Nome do restaurante"
+          width={82}
+          height={82}
+        />
+      </div>
+
+      <h2 className="p-1">{restaurant.name}</h2>
+
+      <div className="pt-24 text-center space-y-2">
+        <h3 className="text-2xl font-semibold">Seja bem-vindo!</h3>
+
         <p className="opacity-55">
-            Escolha como prefere aproveitar sua refeiçao. Estamos
-            oferecer praticidade e sabor em cada detalhe!
+          O sabor que você procura está aqui, onde cada prato conta uma
+          história.
         </p>
+      </div>
+
+      <div className="pt-14">
+        <Button
+          className="bg-red-700 text-white px-6 py-2 rounded-full"
+          asChild
+        >
+          <Link href={`/${restaurant.slug}/menu`}>
+            Ver cardápio
+          </Link>
+        </Button>
+      </div>
     </div>
-    <div className="grid grid-cols-2 pt-14">
-    <ConsumptionMethodOption
-    option="DINE_IN"
-    slug={slug}
-    buttonText="Para comer aqui"
-    imageAlt="Comer aqui"
-    imageUrl="/dine_in.jpg"
-    coverImageUrl="/restaurant.jpg"
-    
-    />
-     <ConsumptionMethodOption
-     option="TAKEAWAY"
-     slug={slug}
-    buttonText="Para levar"
-    imageAlt="Para levar"
-    imageUrl="/sacola.jpg"
-    coverImageUrl="/restaurant.jpg"
-    />
-    </div>
-</div>
-)
+  );
 };
-export default RestaurantPage;
+
+export default HomePage;
