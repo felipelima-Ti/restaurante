@@ -42,11 +42,6 @@ const formSchema = z.object({
     .trim()
     .optional()
     .transform((value) => (value ? formatarEndereco(value) : "")),
-  cartao: z
-    .string()
-    .trim()
-    .optional()
-    .transform((value) => (value ? formatarEndereco(value) : "")),
   pagamento: z.string().trim().min(1, { message: "Selecione uma forma de pagamento" }),
 });
 
@@ -69,7 +64,6 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
       name: "",
       cpf: "",
       endereco: "",
-      cartao: "",
       pagamento: "",
     },
     shouldUnregister: true,
@@ -87,7 +81,6 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
           customerCpf: data.cpf,
           customerEndereco: data.endereco,
           customerName: data.name,
-          customerCartao: data.cartao,
           customerPagamento: data.pagamento,
           products,
           slug,
@@ -163,21 +156,6 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   </FormItem>
                 )}
               />
-
-              <FormField
-                control={form.control}
-                name="cartao"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Observações</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Ex: tirar cebola ..." {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
               <FormField
                 control={form.control}
                 name="pagamento"
@@ -188,8 +166,6 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                       <select {...field} className="border rounded p-2 w-full">
                         <option value="">Selecione...</option>
                         <option value="Caixa">Caixa</option>
-                        <option value="Credito">Crédito</option>
-                        <option value="Debito">Débito</option>
                         <option value="Pix">Pix</option>
                       </select>
                     </FormControl>
@@ -207,24 +183,6 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
 
                   {pagamentoSelecionado === "Caixa" && (
                     <p>Pague no caixa depois</p>
-                  )}
-
-                  {pagamentoSelecionado === "Credito" && (
-                    <>
-                      <Input placeholder="Número do cartão" className="w-full" />
-                      <Input placeholder="Nome no cartão" className="w-full" />
-                      <div className="flex gap-2">
-                        <Input placeholder="Validade" className="w-1/2" />
-                        <Input placeholder="CVV" className="w-1/2" />
-                      </div>
-                    </>
-                  )}
-
-                  {pagamentoSelecionado === "Debito" && (
-                    <>
-                      <Input placeholder="Número do cartão" className="w-full" />
-                      <Input placeholder="Nome no cartão" className="w-full" />
-                    </>
                   )}
 
                   {pagamentoSelecionado === "Pix" && (

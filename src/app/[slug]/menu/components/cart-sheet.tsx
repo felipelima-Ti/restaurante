@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import CartProductItem from "./cart-product-item";
 import { Card,CardContent } from "@/components/ui/card";
 import { formatCurrency } from "@/helpers/formatcurrency";
-import "./style.css"
+
 
 import { Button } from "@/components/ui/button";
 import FinishOrderDialog from "./finish-order-dialog";

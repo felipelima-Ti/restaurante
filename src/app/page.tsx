@@ -2,7 +2,8 @@ import { db } from "@/lib/prisma";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import ConsumptionMethodOption from "./[slug]/components/comsumption-method-option";
-import "./style.css";
+
+
 
 const HomePage = async () => {
   const restaurant = await db.restaurant.findFirst(); // Busca restaurante
