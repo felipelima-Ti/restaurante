@@ -112,8 +112,9 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
         </DrawerHeader>
 
         <div className="p-5">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-12">
+          <Form  {...form}>
+            <div className="p-10">
+            <form onSubmit={form.handleSubmit(onSubmit)} className=" space-y-8">
               <FormField
                 control={form.control}
                 name="name"
@@ -127,6 +128,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   </FormItem>
                 )}
               />
+             
                 <FormField
                 control={form.control}
                 name="cpf"
@@ -233,8 +235,10 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                 </DrawerClose>
               </DrawerFooter>
             </form>
+             </div>
           </Form>
         </div>
+        
       </DrawerContent>
     </Drawer>
   );
