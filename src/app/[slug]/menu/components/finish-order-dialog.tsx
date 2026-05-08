@@ -113,7 +113,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
 
         <div className="p-5">
           <Form  {...form}>
-            <div className="pt-40">
+            <div className="">
             <form onSubmit={form.handleSubmit(onSubmit)} className=" space-y-8">
               <FormField
                 control={form.control}
@@ -122,7 +122,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   <FormItem>
                     <FormLabel>Seu Nome</FormLabel>
                     <FormControl>
-                      <Input placeholder="Digite seu nome..." {...field} />
+                      <Input className="p-7" placeholder="Digite seu nome..." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -136,7 +136,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   <FormItem>
                     <FormLabel>Seu CPF</FormLabel>
                     <FormControl>
-                      <PatternFormat
+                      <PatternFormat className="p-7"
                         placeholder="Digite seu CPF..."
                         format="###.###.###-##"
                         customInput={Input}
@@ -156,7 +156,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
           <FormLabel>Metodo de consumo</FormLabel>
 
           <FormControl>
-            <select {...field} className="border rounded p-2 w-full">
+            <select {...field} className="border rounded p-4 w-full">
               <option value="">Selecione...</option>
               <option value="DINE_IN">Comer aqui</option>
               <option value="TAKEAWAY">Para levar</option>
@@ -175,12 +175,13 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   <FormItem>
                     <FormLabel>Seu endereço (opcional)</FormLabel>
                     <FormControl>
-                      <Input className="" placeholder="Digite seu endereço..." {...field} />
+                      <Input className="p-7" placeholder="Digite seu endereço..." {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
+              <br></br><br></br><br></br>
               <FormField
                 control={form.control}
                 name="pagamento"
@@ -188,7 +189,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   <FormItem>
                     <FormLabel>Forma de pagamento</FormLabel>
                     <FormControl>
-                      <select {...field} className="border rounded p-2 w-full ">
+                      <select {...field} className="border rounded p-4 w-full ">
                         <option value="">Selecione...</option>
                         <option value="Caixa">Caixa</option>
                         <option value="Pix">Pix</option>
