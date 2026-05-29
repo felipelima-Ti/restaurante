@@ -38,6 +38,7 @@ const orders = await db.order.findMany({
         },
     }
 });
+
     return <OrderList orders={orders} />;
 }
  
