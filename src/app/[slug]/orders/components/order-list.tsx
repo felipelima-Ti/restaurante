@@ -41,7 +41,23 @@ const getConsumptionMethodLabel = (method: string) => {
 
 const OrderList = ({ orders }: OrderListProps) => {
   const router = useRouter();
- 
+ const updateStatus = async (
+  orderId: string,
+  status: "PENDING" | "IN_PREPERATION" | "DELIVERY" | "FINISHED"
+) => {
+  await fetch(`/api/orders/${orderId}/status`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      status,
+    }),
+  });
+
+  router.refresh();
+};
+
   const handleBackClick = () => {
     router.back();
     setTimeout(() => {

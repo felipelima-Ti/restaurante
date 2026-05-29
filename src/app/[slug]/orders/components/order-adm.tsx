@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { formatCurrency } from "@/helpers/formatcurrency";
 import { useRouter } from "next/navigation";
 
+
 interface OrderListProps {
   orders: Prisma.OrderGetPayload<{
     include: {
@@ -50,6 +51,33 @@ const OrderList = ({ orders }: OrderListProps) => {
       }
     }, 100);
   };
+ const updateStatus = async (
+  orderId: number,
+  status: OrderStatus
+) => {
+  try {
+    await fetch(`/api/orders/${orderId}/status`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        status,
+      }),
+    });
+
+    router.refresh();
+  } catch (error) {
+    console.error("Erro ao atualizar pedido:", error);
+  }
+};
+const deleteOrder = async (orderId: number) => {
+  await fetch(`/api/orders/${orderId}`, {
+    method: "DELETE",
+  });
+
+  router.refresh();
+};
 
   return (
     <div className="space-y-6 p-6">
@@ -140,8 +168,56 @@ const OrderList = ({ orders }: OrderListProps) => {
               ))}
             </div>
 
-            <Separator />
-            <p className="text-sm font-medium">{formatCurrency(order.total)}</p>
+          <Button
+  className="w-full"
+  onClick={() => {
+    if (order.status === OrderStatus.PENDING) {
+      updateStatus(order.id, OrderStatus.IN_PREPERATION);
+    } else if (order.status === OrderStatus.IN_PREPERATION) {
+      updateStatus(order.id, OrderStatus.DELIVERY);
+    } else if (order.status === OrderStatus.DELIVERY) {
+      updateStatus(order.id, OrderStatus.FINISHED);
+    }
+  }}
+  disabled={order.status === OrderStatus.FINISHED}
+>
+  {order.status === OrderStatus.PENDING &&
+    "Iniciar preparo"}
+
+  {order.status === OrderStatus.IN_PREPERATION &&
+    "Enviar para entrega"}
+
+  {order.status === OrderStatus.DELIVERY &&
+    "Finalizar pedido"}
+
+  {order.status === OrderStatus.FINISHED &&
+    "Pedido finalizado"}
+</Button>
+
+<Separator />
+
+<p className="text-sm font-medium">
+  {formatCurrency(order.total)}
+</p>
+<div className="flex gap-2">
+  <Button
+    variant="outline"
+    onClick={() =>
+      router.push(
+        `/admin/orders/${order.id}/edit`
+      )
+    }
+  >
+    Editar
+  </Button>
+
+  <Button
+    variant="destructive"
+    onClick={() => deleteOrder(order.id)}
+  >
+    Excluir
+  </Button>
+</div>
           </CardContent>
         </Card>
       ))}
