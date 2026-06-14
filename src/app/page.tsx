@@ -12,8 +12,8 @@ const HomePage = async () => {
   }
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center px-6 pt-24">
-      <div className="flex flex-col items-center gap-2">
+    <div className=" bg-red-400/10 h-screen flex flex-col items-center justify-center px-6 pt-24">
+      <div className="flex flex-col items-center">
         <Image
           src="https://github.com/felipelima-Ti/restaurante/blob/main/public/logoi.png?raw=true"
           alt="Nome do restaurante"
@@ -22,10 +22,10 @@ const HomePage = async () => {
         />
       </div>
 
-      <h2 className="p-1">{restaurant.name}</h2>
-
+      <h2 className="p-1 text-3xl text-red-700  font-bold text-center">{restaurant.name}</h2>
       <div className="pt-24 text-center space-y-2">
         <h3 className="text-2xl font-semibold">Seja bem-vindo!</h3>
+        
 
         <p className="opacity-55">
           O sabor que você procura está aqui, onde cada prato conta uma
@@ -35,7 +35,7 @@ const HomePage = async () => {
 
       <div className="pt-14">
         <Button
-          className="bg-red-700 text-white px-6 py-2 rounded-full"
+          className="bg-red-700 text-white px-10 py-2 rounded-full"
           asChild
         >
           <Link href={`/${restaurant.slug}/menu`}>
