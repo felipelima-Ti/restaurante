@@ -24,7 +24,7 @@ export default function AdminLoginPage() {
     });
 
     if (response.ok) {
-      router.push(`/admin/orders?cpf=${cpf}`);
+      router.replace("/admin/orders");
     } else {
       alert("CPF não autorizado");
     }
