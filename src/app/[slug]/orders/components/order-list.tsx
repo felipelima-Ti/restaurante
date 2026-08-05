@@ -6,7 +6,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import { formatCurrency } from "@/helpers/formatcurrency";
-import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { useParams, useRouter } from "next/navigation";
+
+
 
 interface OrderListProps {
   orders: Prisma.OrderGetPayload<{
@@ -25,6 +28,7 @@ interface OrderListProps {
     };
   }>[];
 }
+export const dynamic = "force-dynamic";
 const getStatusLabel = (status: OrderStatus) => {
   if (status == "DELIVERY") return "Saiu para a entrega";
   if (status == "FINISHED") return "Finalizado";
@@ -41,6 +45,10 @@ const getConsumptionMethodLabel = (method: string) => {
 
 const OrderList = ({ orders }: OrderListProps) => {
   const router = useRouter();
+  const { slug } = useParams<{ slug: string }>();
+
+ 
+  
  const updateStatus = async (
   orderId: string,
   status: "PENDING" | "IN_PREPERATION" | "DELIVERY" | "FINISHED"
@@ -58,26 +66,27 @@ const OrderList = ({ orders }: OrderListProps) => {
   router.refresh();
 };
 
-  const handleBackClick = () => {
-    router.back();
-    setTimeout(() => {
-      if (typeof window !== "undefined") {
-        location.reload();
-      }
-    }, 100);
-  };
+ const handleBackClick = () => {
+  router.push(`/${slug}`);
+};
 
   return (
     <div className="space-y-6 p-6">
+    
       <Button
         size="icon"
         variant="secondary"
-        className="rounded-full"
+        className="rounded-full bg-red-500 text-white hover:bg-red-600 w-50"
         onClick={handleBackClick}
       >
-        <ChevronsLeftIcon />
+        <ChevronsLeftIcon className=" ml-2 h-4 w-20">
+        
+        </ChevronsLeftIcon>
+        <p className="p-3">voltar para o cardapio</p>
       </Button>
-
+<p className="text-sm text-muted-foreground">
+          Seu pedido ja esta sendo preparado, aguarde a entrega do seu pedido.
+        </p>
       <div className="flex items-center gap-3">
         <ScrollTextIcon />
         <h2 className="text-lg font-semibold">Meus pedidos</h2>

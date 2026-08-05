@@ -38,7 +38,7 @@ const CpfForm = () => {
     const router = useRouter();
     const pathname = usePathname();
     const onSubmit = (data: FormSchema) => {
-    router.replace(`${pathname}?cpf=${removeCpfPunctation(data.cpf)}`)
+    router.replace('/[slug]/orders?cpf=' + removeCpfPunctation(data.cpf));
     }
     const handleCancel = () => {
         router.back();
