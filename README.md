@@ -18,7 +18,7 @@ Funcionalidades
 
  Layout responsivo (mobile-first)
  
- Catálogo de produtos (pizzas, lanches, bebidas etc.)
+ Catálogo de produtos
  
  Carrinho de compras com resumo do pedido
  
