@@ -42,4 +42,3 @@ next-env.d.ts
 
 /src/generated/prisma
 /prisma/migrations
-src/lib/admin-cpfs.ts
